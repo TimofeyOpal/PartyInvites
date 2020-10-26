@@ -21,6 +21,7 @@ namespace PartyInvites
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                   // webBuilder.UseWebRoot("static");
                 });
     }
 }

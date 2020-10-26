@@ -1,20 +1,57 @@
-﻿@{
+﻿@model PartyInvites.Models.ViewsModels.LoginViewModel
+
+@{
     Layout = null;
 }
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Party!</title>
-    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <!--<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />-->
+    <link rel="stylesheet" href="/css/site.css" />
 </head>
 <body>
-    
+    <header>
+        <h1>Мой сайт</h1>
+        <div class="avtorization" style="padding:21px">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <p>@User.Identity.Name</p>
+
+                <form method="post" asp-controller="Account" asp-action="Logout">
+                    <input type="submit" value="Выход" />
+                </form>
+            }
+            else
+            {
+                <a asp-controller="Account" asp-action="Login">Вход</a>
+                <a asp-controller="Account" asp-action="Register">Регистрация</a>
+            }
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a asp-action="Blog"> Блог</a></li>
+                <li><a asp-action="myself">О мне</a></li>
+                <li><a asp-action="cors">Товары</a></li>
+                <li><a asp-action="komment">Комментарии</a></li>
+
+            </ul>
+
+        </nav>
+       
+    </header>
+    <section class="background">
         <div class="text-center">
             <h3> We're going to have an exciting party!</h3>
             <h4>And YOU are invited!</h4>
             <a class="btn btn-primary" asp-action="RsvpForm">RSVP Now</a>
         </div>
+    </section>
     
+    
+
+
 </body>
 </html>

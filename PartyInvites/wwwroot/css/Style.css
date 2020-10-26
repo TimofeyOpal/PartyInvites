@@ -1,8 +1,8 @@
-﻿.form {
+﻿
+
+.form {
     margin: 100px auto;
-    text-align:center;
-
-
+    text-align: center;
 }
 field-validation-error {
     color: #f00;

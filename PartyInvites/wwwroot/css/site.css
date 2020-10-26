@@ -1,10 +1,15 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Provide sufficient contrast against white background */
@@ -71,4 +76,82 @@ body {
 }
 .form{
     margin:0 auto;
+}
+.avtorization {
+    padding: 24px;
+    
+}
+.nav-menu {
+    padding: 10px;
+    margin-left:50%;
+}
+
+nav {
+    display: block;
+}
+
+.nav-menu ul {
+    display: flex;
+}
+
+.nav-menu li {
+    padding: 10px;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: darkblue;
+    font-size: 20px;
+}
+    .nav-menu a:hover {
+        text-decoration: none;
+        color: black;
+        transition: 0.5s;
+    }
+li {
+    list-style-type: none;
+}
+header {
+    display: flex;
+    background: #63AFD0;
+}
+    header h1 {
+        padding: 10px;
+        color: darkblue;
+
+    }
+.background {
+    background: url(/IMG/backgroung.png);
+    height: 700px;
+}
+.text-center{
+    margin: 0 auto;
+    text-align:center;
+    color: antiquewhite;
+   
+}
+.text-center h3 {
+    padding-top:300px;
+    font-size:28px;
+}
+    .text-center h4 {
+        padding-top: 15px;
+        font-size: 23px;
+    }
+
+    .text-center a {
+        padding-top: 25px;
+        font-size: 23px;
+        background:inherit;
+    }
+    
+@media screen and (max-width: 760px) {
+    nav ul{
+        visibility: hidden;
+        
+    }
+    .nav-menu {
+        padding: 10px;
+        margin-left: -61%;
+    }
+
 }

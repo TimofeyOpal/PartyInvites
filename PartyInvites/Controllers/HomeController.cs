@@ -37,5 +37,6 @@ namespace PartyInvites.Controllers
         {
             return View(Repository.Responses.Where(r => r.WillAttend == true));
         }
+
     }
 }
